@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>iOS - Swift</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <style type="text/css">
+    @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+    @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+    @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+    body { font-family: 'Droid Serif'; }
+    h1, h2, h3 {
+      font-family: 'Yanone Kaffeesatz';
+      font-weight: normal;
+    }
+    .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+    .remark-slide-content{background: transparent;}
+    .remark-slide {
+      background: #fff center center no-repeat;
+      background-size: cover;
+    }
+    .remark-slide-number{color: #fff;font-size: 1rem;font-weight: bold;}
+
+  </style>
+</head>
+<body>
+  <textarea id="source" style="display:none;">
+
+    class: center, middle
+
+        
+    ![Targettrust](assets/targettrust.png)
+
+    ![Swift](assets/swift-logo.png)
+
+    # Curso de Introdução ao desenvolvimento para iOS - Swift
+
+
+    ---
+
+    # iOS
+    ###Introdução
+
+    O iPhone e o iPad são fenômenos.
+    Não só seus marketshares possuem números impressionantes, mas também o número de vendas da App Store traz ânimo para nós, desenvolvedores.
+    Mesmo com o número expressivo de dispositivos Android, é estimado que a App Store seja responsável por 85-90% do faturamento de todas os aplicativos mó́veis já vendidos (http://bit.ly/appstoreNumeros) , tendo revertido quase 4 bilhões de dólares aos desenvolvedores de iPad e iPhone.
+    E o Brasil? De acordo com o site de análise mobile flurry.com, o mercado brasileiro atingiu, em 2012, a décima posição mundial em número de smartphones. 
+
+    São mais de 13 milhões de dispositivos, em sua grande maioria iPhones e Androids. 
+
+    ---
+
+    # Desenvolvendo para o iOS
+   
+    Em 2007, com o lançamento do iPhone, o sistema operacional que roda dentro do dispositivo tinha o criativo nome de iPhone OS. Com a evolução dos dispositivos e a chegada do iPad, o sistema mudou de nome para iOS. O iOS nasceu do já antigo sistema operacional, o OS X.
+    
+    Curiosamente, no início não havia como desenvolver para o iPhone. O kit de desenvolvimento, o SDK, só  ficou disponível em 2008. Nessa época ele era pago, tornando-se gratuito em 2010 (apesar disso, os betas só podem ser utilizados pelos desenvolvedores que possuem uma conta paga na Apple).
+
+    Para instalar o SDK e programar para o iOS, você vai necessariamente precisar de um computador que rode o OS X. Basicamente você só poderá desenvolver com um Mac. Sim, é um computador bem mais caro do que o valor que estamos habituados. 
+
+    Você pode comprar seu Mac em diversos lugares, sendo que alguns apresentam até preços melhores que na própria Apple Store. 
+
+    ---
+
+    # O que é o Swift?
+
+    Swift é uma linguagem de programação para desenvolvimento de aplicações no iOS e OS X criada pela Apple. Criada para
+    coexistir com Objective-C e para ser mais resiliente a código com erros, Swift foi apresentada em 2014 na Apple's
+    developer conference WWDC. Foi construída com o compilador LLVM já incluído no Xcode 6 beta.
+
+    Swift é grátis e em código aberto, com binários disponíveis para OS X e Linux. Possui interoperabilidade com Objective-C. É possível criar uma nova aplicação em Swift e utilizar bibliotecas de Objective-C no mesmo projeto.
+
+    O livro oficial [Swift Programming Language](https://itunes.apple.com/us/book/swift-programming-language/id881256329) da
+    Apple já está disponível via IBooks (apenas em inglês).
+
+    Confira também o tutorial completo de Swift da Apple [getting started guide](https://developer.apple.com/library/prerelease/ios/referencelibrary/GettingStarted/RoadMapiOS/index.html), também disponível apenas em inglês.
+       
+    ---
+
+    ## Swift
+    ## Variáveis e constantes 
+
+    A diretiva ***let*** é utilizada para a declaração de uma constante. Já para a declaração de uma variável
+    utilizamos ***var***.
+    
+    Em Swift, variáveis e constantes podem ser declaradas sem um "tipo" específico.
+
+    ```swift 
+    var myVariable = 42
+    myVariable = 50
+    let myConstant = 42
+    ```
+
+    ---
+
+    ## Swift
+    ## Variáveis e constantes 
+
+    Declaração implícita e explícita
+
+
+    ```swift 
+    let implicitDouble = 70.0
+    let explicitDouble: Double = 70
+    ```
+
+    Vetor
+
+    ```swift 
+    var shoppingList = ["catfish", "water", "tulips", "blue paint"]
+    var shoppingList = [5, 4, 2, 10]
+    var emptyArray = [String]()
+    ```
+
+    Dicionário de dados
+
+    ```swift 
+    var occupations = [ "Malcolm": "Captain", "Kaylee":"Mechanic"]
+    let emptyDictionary = [String: Float]()
+    ```
+
+    ---
+
+    ## Swift
+    ## Condicionais
+
+    Condicional If
+
+    ```swift 
+    if myVar < 200 {
+        print("Valor maior que 200")
+    } else {
+        print("Valor maior que 200")
+    }
+    ```
+    
+    ---
+
+    ## Swift
+    ## Condicionais
+
+
+    Condicional Switch
+
+    ```swift 
+        let varNumero= 10
+        switch varNumero {
+        case 0:
+            print("É 0")
+        case 10:
+            print("É 10")
+        default:
+            print("Nenhuma das alternativas")
+        }
+
+    ```
+
+    ---
+
+    ## Swift
+    ## Condicionais Especiais
+
+    O guard é utilizado para transferir o controle do programa para fora do escopo atual, se não forem cumpridas uma ou mais condições.
+
+    Podemos utilizar if e let em conjunto para trabalharmos com valores que possam retornar valores nulos. Estes valores são apresentados como opcionais, podendo conter valor ou nil.
+
+    Escrevemos o símbolo "?" após o tipo para marcar um valor como opcional.
+
+    Condicional If let
+
+    ```swift 
+    var myString:String? = "Curso Swift"
+    if let isExistsmyString = myString {
+        // do some thing here
+    } else {
+        // no middle name
+    }
+    ```
+    ---
+
+    ## Swift
+    ## Condicionais Especiais
+
+    Condicional guard
+
+    ```swift 
+    func fooNonOptionalGood(x: Int) {
+        guard x > 0 else {
+        // Value requirements not met, do something
+        return
+        }
+        // Do stuff with x
+    }
+    ```
+
+    ```swift 
+    func fooNonOptionalBad(x: Int) {
+         if x <= 0 {
+         // Value requirements not met, do something
+         return
+         }
+         // Do stuff with x
+    }
+    ```
+
+     ---
+
+    ## Swift
+    ## Laços de controle
+
+    While
+
+    ```swift 
+    while n < 100 {
+        n = n * 2
+    } 
+    ```
+
+    ---
+
+    ## Swift
+    ## Laços de controle
+
+    Repeat
+
+    ```swift 
+    var m = 2
+    repeat {
+        m = m * 2
+    } while m < 100
+    print(m)
+    ```
+
+    ---
+
+    ## Swift
+    ## Laços de controle
+
+    For
+
+    ```swift 
+
+    var total = 0
+    for i in 0..<4 {
+        total += i
+    }
+    print(total)
+
+    ```
+
+    ---
+
+    ## Swift
+    ## Funções
+
+    Sintaxe
+
+    ```swift 
+    func(parametroEntrada:tipo)-> tipoSaida{
+        return valor
+    }
+
+    ```
+
+    Função sem parâmetros de entrada
+
+    ```swift 
+    
+    func returnFifteen() -> Int {
+        var y = 10
+        return y
+    }
+
+    ```
+
+    Função sem parâmetros de saída
+
+    ```swift 
+    func sumAB() -> Void {
+        A = A + B
+    }
+
+    ```
+
+    ---
+
+    ## Swift
+    ## Funções
+
+
+    ```swift 
+    func greet(person: String, day: String) -> String {
+        return "Hello \(person), today is \(day).”
+    }
+    greet(person: "Bob", day: "Tuesday")
+    ```
+    
+    ```swift 
+    func greet(_ person: String, on day: String) -> String {
+        return "Hello \(person), today is \(day).”
+    }
+    greet("Bob", on: "Tuesday")
+
+    ```
+    
+    ```swift 
+    func lessThanTen(number: Int) -> Bool {
+        return number < 10
+    }
+
+    ```
+
+    ---
+
+    ## Swift
+    ## Funções
+
+
+    ```swift 
+    func sumOf(numbers: Int...) -> Int {
+        var sum = 0
+        for number in numbers {
+            sum += number
+        }
+        return sum
+    }
+    sumOf()
+    sumOf(numbers: 42, 597, 12)
+
+    ```
+
+    ---
+
+    ## Swift
+    ## Clousures
+
+
+    ```swift 
+    var oneParameterAndReturnValue = { (x: Int) -> Int in
+        return x % 2
+    }
+    print(oneParameterAndReturnValue(4))
+
+    ```
+
+    ```swift 
+    let multipleParametersAndReturnValue = { (first: String, second: String) -> String in
+        return first + " " + second
+    }
+    print(multipleParametersAndReturnValue("Curso","iOS"))
+
+    ```
+
+    ```swift 
+    let numbers = [20, 19, 7, 12]
+    let sortedNumbers = numbers.sorted { $0 > $1 }
+    print(sortedNumbers)
+
+    ```
+
+    ```swift 
+    var noParameterAndReturnValue = {() -> Int in
+        return 1000
+    }
+    print(noParameterAndReturnValue())
+
+    ```
+
+    ---
+
+    ## Swift
+    ## Classes
+
+
+    ```swift 
+    class Shape {
+        var numberOfSides = 0
+        func simpleDescription() -> String {
+            return "A shape with \(numberOfSides) sides."
+        }
+    }
+
+    ```
+
+    ---
+
+    ## Swift
+    ## Classes
+
+
+    ```swift 
+
+    class Capitulo{
+        var titulo: String = ""
+        var historia: String = ""
+
+        convenience init(f_titulo: String, f_historia: String) {
+            self.init()
+            self.titulo = f_titulo ?? ""
+            self.historia = f_historia ?? ""
+
+        }
+    }
+
+    ```
+  </textarea>
+  <script src="remark-latest.min.js">
+  </script>
+  <script>
+    var slideshow = remark.create();
+  </script>
+</body>
+</html>
