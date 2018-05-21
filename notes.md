@@ -1,7 +1,6 @@
 
 # Anotações e Links
 
-
 Swift vs C#
 [https://medium.com/@lucasdamiani/swift-vs-c-6dbc35944cd9](https://medium.com/@lucasdamiani/swift-vs-c-6dbc35944cd9)
 
@@ -14,6 +13,11 @@ Lazy Initialization with Swift
 Interfaces vs Inheritance in Swift
 [http://mikebuss.com/2016/01/10/interfaces-vs-inheritance/](http://mikebuss.com/2016/01/10/interfaces-vs-inheritance/)
 
+Swift From Scratch
+[https://code.tutsplus.com/series/swift-from-scratch--cms-709](https://code.tutsplus.com/series/swift-from-scratch--cms-709)
+
+App Evolution With Swift
+[https://www.codeschool.com/courses/app-evolution-with-swift](https://www.codeschool.com/courses/app-evolution-with-swift)
 
 ## Swift4 Syntax Cheat Sheet
 
