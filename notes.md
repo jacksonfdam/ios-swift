@@ -219,4 +219,8 @@ class MyDataSourceTests: XCTestCase {
 
 > A palavra-chave  **final** não é um nível de acesso, mas pode adicioná-lo a qualquer um dos níveis de acesso (além de “open”) para evitar a criação de uma  **subclass**do tipo ou a utilização de um  **override**.
 
+Everything about Codable in Swift 4
+[https://hackernoon.com/everything-about-codable-in-swift-4-97d0e18a2999](https://hackernoon.com/everything-about-codable-in-swift-4-97d0e18a2999)
 
+Swift 3 — APIs , Network Requests, & JSON: Getting the data
+[https://code.bradymower.com/swift-3-apis-network-requests-json-getting-the-data-4aaae8a5efc0](https://code.bradymower.com/swift-3-apis-network-requests-json-getting-the-data-4aaae8a5efc0)
